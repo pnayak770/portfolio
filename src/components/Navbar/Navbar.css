@@ -1,0 +1,38 @@
+
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    position: sticky;
+    top:0;
+    z-index: 100;  
+}
+.navbar ul{
+    padding: 10px 30px;
+    border-radius: 30px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+   
+}
+.navbar ul li{
+    display: inline-block;
+    padding:5px 10px;
+    margin :0 10px; 
+}
+.navbar ul li a {
+    color: var(--text-color); /* Apply theme-based color */
+    text-decoration: none;
+    font-weight: bold;
+    font-size:25px;
+}
+.navbar button{
+    background-color: var(--btn-color);
+    color: var(--btn-text-color);
+    padding: 12px 25px;
+    border: 0;
+    outline: 0;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
