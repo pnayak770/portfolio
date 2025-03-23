@@ -35,7 +35,7 @@ portfolio/
 
 ## 📸 Screenshots
 
-![Portfolio Preview](/portFolio/public/preview.png)
+![Portfolio Preview](/public/preview.png)
 
 
 ## 🚀 Installation & Setup
