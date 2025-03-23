@@ -68,20 +68,27 @@
   }
   
   .description {
-    max-width: 24ch;
+    max-width: 35ch;
+    margin: auto;
   }
   
   .info {
     display: flex;
     flex-direction: column;
     gap: 20px;
+   min-width: 400px
+  }
+  @media only screen and (max-width: 700px){
+    #hero{
+      margin-top: 100px;
+    }
   }
   
   @media (width >= 800px) {
     .container {
       flex-direction: row-reverse;
       align-items: center;
-      justify-content: space-evenly;
+      justify-content: center;
   
       .hero {
         max-width: 350px;

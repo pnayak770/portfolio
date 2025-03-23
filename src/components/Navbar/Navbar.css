@@ -1,18 +1,19 @@
 
 .navbar{
+  position: sticky;
+  top:0;
+  z-index: 1000;  
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 8%;
-    position: sticky;
-    top:0;
-    z-index: 100;  
 }
 .navbar ul{
     padding: 10px 30px;
     border-radius: 30px;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+    background-color: #f0efef;
    
 }
 .navbar ul li{
@@ -21,7 +22,7 @@
     margin :0 10px; 
 }
 .navbar ul li a {
-    color: var(--text-color); /* Apply theme-based color */
+    color: var(--text-color); 
     text-decoration: none;
     font-weight: bold;
     font-size:25px;
@@ -36,3 +37,120 @@
     font-size: 16px;
     cursor: pointer;
 }
+
+a {
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  a::before,
+  a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #d51616;
+    transition: all 0.5s;
+  }
+  
+  a::before {
+    top: 0;
+    left: 0;
+  }
+  
+  a::after {
+    bottom: 0;
+    right: 0;
+  }
+  
+  .navbar a:hover::before {
+    width: 100%;
+    transition: width 0.25s ease-in-out;
+  }
+  
+  .navbar a:hover::after {
+    width: 100%;
+    transition: width 0.25s ease-in-out 0.25s;
+  }
+  .active{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    border-radius: 10px;
+  }
+  .navbar span{
+    display: none;
+  }
+
+  
+  @media only screen and (max-width: 700px){
+    .navbar button{
+      display: none;
+    }
+    .navbar span{
+      font-size: 50px;
+      display: block;
+      cursor: pointer;/*gpt*/
+      z-index: 2000;/*gpt*/
+    }
+    .navbar ul {
+      position: absolute;
+      top: 70px;
+      right: 0;
+      background-color: white;
+      width: 200px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+    /* .open{
+      display: none;
+    }
+    .close{
+      display: flex;
+
+
+    } */
+
+    .open {
+      transform: translateX(0);
+      display: none;
+    }
+
+    .close {
+      transform: translateX(100%);
+      display: flex;
+    }
+
+    .navbar ul li {
+      text-align: center;
+      padding: 15px;
+      width: 100%;
+    }
+
+    .navbar ul li a {
+      font-size: 20px;
+      display: block;
+      width: 100%;
+    }
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: white; /* Ensures visibility */
+      /* padding: 10px 5%; */
+      height: 15%;
+
+    }
+    
+
+    
+  }
+
+  
